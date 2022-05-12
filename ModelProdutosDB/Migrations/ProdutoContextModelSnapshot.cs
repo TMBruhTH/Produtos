@@ -2,17 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Produtos.Data;
+using ModelProdutosDB.Data;
 
-namespace Produtos.Migrations
+namespace ModelProdutosDB.Migrations
 {
     [DbContext(typeof(ProdutoContext))]
-    [Migration("20220511230952_Initial")]
-    partial class Initial
+    partial class ProdutoContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,7 +18,7 @@ namespace Produtos.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("Produtos.Model.ProdutosModel", b =>
+            modelBuilder.Entity("ModelProdutosDB.ModelDB.ProdutosModel", b =>
                 {
                     b.Property<int>("IdProduto")
                         .ValueGeneratedOnAdd()

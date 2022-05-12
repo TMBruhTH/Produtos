@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Produtos.Model;
+using ModelProdutosDB.ModelDB;
 
-namespace Produtos.Data
+namespace ModelProdutosDB.Data
 {
     public class ProdutoContext : DbContext
     {

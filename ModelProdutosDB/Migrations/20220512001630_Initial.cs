@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Produtos.Migrations
+namespace ModelProdutosDB.Migrations
 {
     public partial class Initial : Migration
     {

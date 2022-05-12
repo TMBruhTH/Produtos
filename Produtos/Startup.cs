@@ -1,17 +1,15 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Produtos.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ModelProdutosDB.Data;
+using Repository.IRepository;
+using Repository.Repository;
+using Service.IService;
+using Service.Service;
 
 namespace Produtos
 {
@@ -31,7 +29,8 @@ namespace Produtos
                 x.UseSqlServer(@"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=ProdutosDB;Data Source=.\BRUNOSQL")
             );
 
-            //services.AddScoped<ISmsEmailRepository, SmsEmailRepository>();
+            services.AddScoped<IProdutoService, ProdutoService>();
+            services.AddScoped<IProdutoRepository, ProdutoRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
