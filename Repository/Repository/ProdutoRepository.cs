@@ -16,27 +16,27 @@ namespace Repository.Repository
             _produtoContext = produtoContext;
         }
 
-        public Task<ProdutosModel> AdicionarProduto(ProdutosModel model)
+        public async Task<ProdutosModel> AdicionarProduto(ProdutosModel model)
         {
             throw new NotImplementedException();
         }
 
-        public Task AtualizarProduto(ProdutosModel model)
+        public async Task<ProdutosModel> AtualizarProduto(ProdutosModel model)
         {
             throw new NotImplementedException();
         }
 
-        public Task ExcluirProduto(int idProduto)
+        public async Task<ProdutosModel> ExcluirProduto(int idProduto)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<ProdutosModel>> PesquisarProdutos()
+        public async Task<IEnumerable<ProdutosModel>> PesquisarProdutos()
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<ProdutosModel>> PesquisarProdutos_Filtro(string descricao)
+        public async Task<IEnumerable<ProdutosModel>> PesquisarProdutos_Filtro(string descricao)
         {
             throw new NotImplementedException();
         }

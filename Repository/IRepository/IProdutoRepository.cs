@@ -9,7 +9,7 @@ namespace Repository.IRepository
         Task<IEnumerable<ProdutosModel>> PesquisarProdutos();
         Task<IEnumerable<ProdutosModel>> PesquisarProdutos_Filtro(string descricao);
         Task<ProdutosModel> AdicionarProduto(ProdutosModel model);
-        Task AtualizarProduto(ProdutosModel model);
-        Task ExcluirProduto(int idProduto);
+        Task<ProdutosModel> AtualizarProduto(ProdutosModel model);
+        Task<ProdutosModel> ExcluirProduto(int idProduto);
     }
 }
