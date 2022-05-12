@@ -10,6 +10,12 @@ namespace Service.Service
     public class ProdutoService : IProdutoService
     {
         private readonly IProdutoRepository _produtoRepository;
+
+        public ProdutoService(IProdutoRepository produtoRepository)
+        {
+            _produtoRepository = produtoRepository;
+        }
+
         public async Task<ProdutosModel> AdicionarProduto(ProdutosModel model)
         {
             return await _produtoRepository.AdicionarProduto(model);
