@@ -43,7 +43,6 @@ namespace Produtos.Controllers
         public async Task<ProdutosModel> ExcluirProduto(int id)
         {
             return await _produtoService.ExcluirProduto(id);
-
         }
 
         [HttpPut]
